@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<body>
+<div>
+<a href="{% url 'home_page' %}">add post</a>
+</div>
+<div>
+
+    {% for ddt in data %}
+        <h1>{{ddt.title}}</h1>
+        <p>{{ddt.body | safe }}</p>
+            
+    {% endfor %}
+</div>
+</body>
+</html>
